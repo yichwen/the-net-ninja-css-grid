@@ -1,0 +1,31 @@
+body {
+  color: #fff;
+  font-family: 'Nunito Semibold';
+  text-align: center;
+}
+
+#content {
+  max-width: 960px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  /* to control the height of each row, and ignore the rest of content if exceeds the height */
+  /* grid-auto-rows: 200px; */
+  /* if height is <= 200px, use 200px, else apply content height */
+  /* grid-auto-rows: minmax(200px, auto); */
+  /* grid-template-rows defines how many rows and the height of each row in the grid */
+  /* the following definition contains 4 rows
+  /* grid-template-rows: 200px 300px 400px 200px; */
+  /* fraction unit */
+  /* no really needed, because normally will adjust according to the content */
+  grid-template-rows: repeat(3, minmax(200px, auto));
+}
+
+#content div {
+  background: #3bbced;
+  padding: 30px;
+}
+
+#content div:nth-child(even) {
+  background: #777;
+}

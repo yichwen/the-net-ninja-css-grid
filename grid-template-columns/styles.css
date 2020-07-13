@@ -1,0 +1,26 @@
+body {
+  color: #fff;
+  font-family: 'Nunito Semibold';
+  text-align: center;
+}
+
+#content {
+  max-width: 960px;
+  margin: 0 auto;
+  display: grid;
+  /* grid-template-columns defines how many columns and the width of each column in the grid */
+  /* grid-template-columns: 30% 20% 50%; */
+  /* fraction unit */
+  /* grid-template-columns: 1fr 2fr 1fr; */
+  /* repeat function */
+  grid-template-columns: repeat(3, 1fr);
+}
+
+#content div {
+  background: #3bbced;
+  padding: 30px;
+}
+
+#content div:nth-child(even) {
+  background: #777;
+}
